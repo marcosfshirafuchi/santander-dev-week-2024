@@ -17,12 +17,12 @@ public class Account {
     private String number;
     private String agency;
 
-    //11 numeros inteiros e dois numeros depois da virgula (Ex: 00000000000,00)
-    @Column(scale = 13, precision = 2)
+    //11 numeros inteiros e dois numeros depois da virgula (Ex: 00.000.000.000,00)
+    @Column(precision = 13, scale = 2)
     private BigDecimal balance;
 
-    //11 numeros inteiros e dois numeros depois da virgula (Ex: 00000000000,00)
-    @Column(name = "additional_limit",scale = 13, precision = 2)
+    //11 numeros inteiros e dois numeros depois da virgula (Ex: 00.000.000.000,00)
+    @Column(name = "additional_limit",precision = 13, scale = 2)
     private BigDecimal limit;
 
     public Long getId() {

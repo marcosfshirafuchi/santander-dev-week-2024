@@ -16,8 +16,8 @@ public class Card {
     @Column(unique = true)
     private String number;
 
-    //11 numeros inteiros e dois numeros depois da virgula (Ex: 00000000000,00)
-    @Column(name = "available_limit", scale = 13, precision = 2)
+    //11 numeros inteiros e dois numeros depois da virgula (Ex: 00.000.000.000,00)
+    @Column(name = "available_limit", precision = 13, scale = 2)
     private BigDecimal limit;
 
     public Long getId() {
